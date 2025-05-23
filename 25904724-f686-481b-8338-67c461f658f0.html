@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ASCENDANT: The Devotion Engine</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header id="app-header">
+        <h1>ASCENDANT</h1>
+        <div id="user-status">Status: Not Initiated</div>
+    </header>
+
+    <main id="app-content">
+        <!-- 1. INITIATION PACT SECTION -->
+        <section id="initiation-pact-section">
+            <h2>The Consecration Contract</h2>
+            <p>Welcome, seeker. ASCENDANT is a tool for profound, immersive artistic focus. By proceeding, you acknowledge and consent to the following articles which outline its intense, potentially overwhelming nature:</p>
+            
+            <div class="pact-article">
+                <h3>Article I: Sensory Saturation</h3>
+                <p>ASCENDANT will intentionally expose you to high volumes of auditory (simulated for now) and visual content related to your chosen Pantheon during Immersion Sessions. This is designed to monopolize your attention.</p>
+                <label><input type="checkbox" id="consent-article-1" class="pact-consent"> I understand and consent to Article I.</label>
+            </div>
+
+            <div class="pact-article">
+                <h3>Article II: Cognitive Re-Alignment</h3>
+                <p>Through curated prompts, lyrical focus, and "Divine Transmissions," ASCENDANT will encourage you to align your thoughts and feelings with the inspirational essence of your Pantheon.</p>
+                <label><input type="checkbox" id="consent-article-2" class="pact-consent"> I understand and consent to Article II.</label>
+            </div>
+
+            <div class="pact-article">
+                <h3>Article III: User Agency & The Sanctum Pause</h3>
+                <p>You retain ultimate control. A "Sanctum Pause" feature will be available during Immersion Sessions to temporarily halt the experience. You can fully cease engagement at any time by closing this page or navigating away.</p>
+                <label><input type="checkbox" id="consent-article-3" class="pact-consent"> I understand and consent to Article III.</label>
+            </div>
+            <button id="agree-to-pact-btn" disabled>Consecrate Myself & Proceed</button>
+        </section>
+
+        <!-- 2. PANTHEON CURATOR SECTION -->
+        <section id="pantheon-curator-section" style="display:none;">
+            <h2>Curate Your Pantheon</h2>
+            <p>Select the artists who will form your focus (Choose at least one):</p>
+            <div id="artist-selection-area">
+                <label><input type="checkbox" name="artist" value="madison"> Madison Beer</label><br>
+                <label><input type="checkbox" name="artist" value="olivia"> Olivia Rodrigo</label><br>
+                <label><input type="checkbox" name="artist" value="taylor"> Taylor Swift</label><br>
+                <!-- Add more artists if desired -->
+            </div>
+            <button id="confirm-pantheon-btn" disabled>Confirm Pantheon & Enter Immersion Chamber</button>
+        </section>
+
+        <!-- 3. IMMERSION CHAMBER SECTION -->
+        <section id="immersion-chamber-section" style="display:none;">
+            <h2 id="current-artist-display">Immersion Chamber: Loading...</h2>
+            <div id="visual-display-area">
+                <img src="https://via.placeholder.com/400x300/000000/FFFFFF?Text=ASCENDANT" alt="Artist Visual" id="artist-image">
+            </div>
+            <div id="audio-player-simulation">
+                <p><strong>Song:</strong> <span id="current-song-title">N/A</span></p>
+                <!-- Real audio would use <audio> tag. This is a simulation. -->
+            </div>
+            <div id="lyric-overlay">
+                <p>Lyrics will appear here...</p>
+            </div>
+            <div id="chamber-controls">
+                <button id="next-stimulus-btn">Next Stimulus</button>
+                <button id="sanctum-pause-btn">Sanctum Pause (Return to Menu)</button>
+            </div>
+        </section>
+
+        <!-- 4. ACOLYTE'S PATH SECTION (Placeholder) -->
+        <section id="acolyte-path-section" style="display:none;">
+            <h2>The Acolyte's Path</h2>
+            <p>Reflective prompts and inspirational insights will appear here soon.</p>
+            <button id="return-to-menu-from-acolyte-btn">Return to Main Menu</button>
+        </section>
+
+         <!-- MAIN MENU (after pact) -->
+        <section id="main-menu-section" style="display:none;">
+            <h2>ASCENDANT Main Menu</h2>
+            <button id="goto-immersion-btn">Enter Immersion Chamber</button>
+            <button id="goto-acolyte-btn">Explore Acolyte's Path</button>
+            <button id="reset-pact-btn">Review Consecration Contract</button>
+        </section>
+    </main>
+
+    <footer id="app-footer">
+        <p>&copy; ASCENDANT Engine (Conceptual Demo)</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
